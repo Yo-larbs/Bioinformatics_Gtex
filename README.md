@@ -1,31 +1,22 @@
 # GTEX analysis
+## Overview
 
-In this notebook i analyse latest Gtex RNAseq data with the metadata.
+This repository contains a compact, fully reproducible computational analysis of GTEx gene-expression data. The project demonstrates an end-to-end dry-lab workflow — from data acquisition and preprocessing through exploratory data analysis, dimensionality reduction (PCA), differential expression testing and basic enrichment — with an emphasis on clarity, reproducibility and interpretability.
 
-THings done in this notebook
+### What this repo delivers
+- A cleaned, documented Jupyter notebook that runs the full analysis top → bottom.  
+- Reproducible scripts to download data and generate a standalone HTML report.  
+- Visual summaries (PCA, volcano plot, heatmap) and downloadable result tables for reuse.
+- created 3 layer neural network to classify tissue type, 99% accurate
 
-## metadata analyis
-Samples per tissue type split by Age and SEX
 
-## Filtering data
-Took top 1000 genes in variance only kept metadat that mapped to samples in counts data
+### Why it’s useful
+- Shows practical skills recruiters value: data wrangling, statistical testing, visualization, and production-aware practices (requirements, scripts, Docker/Conda-ready environment).  
+- Designed for quick review — results are available in `results/` so evaluators can see outputs without executing the pipeline.
 
-## PCA analysis 
-Scree plot and PCA analysis of Top variable genes
+### Key outputs
+- `results/analysis.html` 
+- `Figures/UMAP_tissue_type.png`, `Figures/Heatmap_genes_tissue_type.png`, `Figures/Gene_correlation_plot.png`, `Figures/Neural_network_confusion_matrix.png`
+- `data/` (or link) — pointers to the exact public subset used for reproducibility
 
-## UMAP embedding
-used PCAs for UMAP embedding can see clear separation when coloured by Tissue type, tissue type mostly drives variation
-
-## Heatmap visualisations
-
-Gene expression in tissue types and Gene correlation plot 
-
-## Random forest
-used Random forest ML classifier to build model that predicted tissue type, 98 Accuracry
-confusion matrix in figures
-
-## Neural Network
-
-created 3 layer neural network to classify tissue type, 99% accurate
-Training data and Confusion matrix in figures
 
